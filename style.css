@@ -1,0 +1,141 @@
+/* COLOR VARIABLES */
+:root {
+  --bg: #F1F0EC;
+  --text: #2E435E;
+  --accent: #F7B500;
+  --neutral: #9A8A82;
+  --dark-accent: #4A2A1D;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.logo {
+  max-width: 520px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-weight: 900;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-weight: 200;
+  max-width: 650px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.1rem;
+}
+
+/* BUTTON */
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--dark-accent);
+  padding: 0.9rem 2.2rem;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 40px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* SECTIONS */
+section {
+  padding: 4rem 2rem;
+}
+
+/* SERVICES */
+.services h2,
+.promise h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.service-box {
+  border: 2px solid var(--neutral);
+  padding: 2rem;
+  border-radius: 12px;
+  background: transparent;
+}
+
+.service-box h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.service-box p {
+  font-weight: 200;
+}
+
+/* PROMISE */
+.promise {
+  background-color: rgba(154, 138, 130, 0.1);
+  text-align: center;
+}
+
+.promise p {
+  max-width: 700px;
+  margin: auto;
+  font-weight: 200;
+  font-size: 1.1rem;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+}
+
+.contact-box {
+  display: inline-block;
+  border: 2px solid var(--dark-accent);
+  padding: 2rem 3rem;
+  border-radius: 12px;
+}
+
+.contact-box p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: var(--neutral);
+}

@@ -1,0 +1,150 @@
+:root {
+  --bg: #F1F0EC;
+  --text: #2E435E;
+  --accent: #F7B500;
+  --neutral: #9A8A82;
+  --dark-accent: #4A2A1D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+/* Scroll animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.logo {
+  max-width: 520px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  font-weight: 200;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--accent);
+  color: var(--dark-accent);
+  padding: 0.9rem 2.4rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+.btn-outline {
+  display: inline-block;
+  margin-top: 1.4rem;
+  padding: 0.8rem 2rem;
+  border: 2px solid var(--accent);
+  border-radius: 40px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: var(--dark-accent);
+}
+
+/* Sections */
+section {
+  padding: 4.5rem 2rem;
+}
+
+.services h2,
+.promise h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.service-grid {
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-box {
+  border: 2px solid var(--neutral);
+  padding: 2.3rem;
+  border-radius: 14px;
+  transition: transform 0.25s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-6px);
+}
+
+.promise {
+  background: rgba(154, 138, 130, 0.1);
+  text-align: center;
+}
+
+.promise p {
+  max-width: 760px;
+  margin: auto;
+  font-weight: 200;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact-box {
+  display: inline-block;
+  border: 2px solid var(--dark-accent);
+  padding: 2.4rem 3.2rem;
+  border-radius: 14px;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: var(--neutral);
+}

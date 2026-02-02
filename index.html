@@ -5,32 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Imagine Electric | Smart & Custom Lighting</title>
 
-  <!-- Inter Font -->
+  <!-- Google Fonts (Static-safe) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
   <!-- HERO -->
   <header class="hero fade-up">
-    <img src="logo.png" alt="Imagine Electric Logo" class="logo" />
+    <img src="./logo.png" alt="Imagine Electric Logo" class="logo">
 
     <h1>Smart Lighting, Thoughtfully Designed</h1>
     <p>
-      Imagine Electric delivers high-quality electrical services with a focus on
-      custom lighting fixtures and intelligent lighting systems. We design and
-      install solutions that not only look incredible, but actively reduce energy
-      waste and lower your monthly electricity bills.
+      Imagine Electric provides professional electrical services specializing in
+      custom lighting fixtures and intelligent lighting systems. Our solutions
+      are designed to enhance comfort, improve efficiency, and significantly
+      reduce long-term energy costs.
     </p>
 
-    <div class="hero-buttons">
-      <a href="https://imagineelectric.setmore.com" target="_blank" class="btn-primary">
-        Book an Appointment
-      </a>
-    </div>
+    <a
+      href="https://imagineelectric.setmore.com"
+      class="btn-primary"
+      target="_blank"
+      rel="noopener"
+    >
+      Book an Appointment
+    </a>
   </header>
 
   <!-- SERVICES -->
@@ -41,27 +45,27 @@
       <div class="service-box fade-up">
         <h3>Custom Lighting Fixtures</h3>
         <p>
-          We design and install unique lighting fixtures that enhance the character
-          of your home or business. From accent lighting to full-room designs,
-          every solution is crafted with aesthetics, efficiency, and longevity in mind.
+          We create and install unique lighting designs tailored to your space.
+          Every fixture is carefully selected or designed to balance beauty,
+          performance, and energy efficiency.
         </p>
       </div>
 
       <div class="service-box fade-up">
-        <h3>Smart Lighting Installations</h3>
+        <h3>Smart Lighting Systems</h3>
         <p>
-          Motion-activated lighting, programmable switches, and smart systems that
-          adapt to your routine. Enjoy lights that turn off when not needed, respond
-          automatically, and give you total control over energy usage.
+          From motion-sensing lights to programmable smart switches, we install
+          systems that automatically adapt to your lifestyle while reducing
+          unnecessary power usage.
         </p>
       </div>
 
       <div class="service-box fade-up">
-        <h3>Energy-Saving Electrical Upgrades</h3>
+        <h3>Energy-Efficient Electrical Upgrades</h3>
         <p>
-          Our energy-focused installations are designed to minimize power waste
-          while maintaining comfort and performance. The result is lower bills,
-          smarter usage, and a future-ready electrical system.
+          Our upgrades modernize outdated electrical systems to improve safety,
+          performance, and efficiency—helping homeowners and businesses lower
+          their monthly electricity bills.
         </p>
       </div>
     </div>
@@ -71,22 +75,27 @@
   <section class="promise">
     <h2 class="fade-up">Our Commitment</h2>
     <p class="fade-up">
-      At Imagine Electric, our goal is simple: deliver exceptional electrical work
-      paired with intelligent lighting solutions that save you money long-term.
-      We take pride in precision, transparency, and leaving every space better
-      than we found it.
+      At Imagine Electric, we believe quality electrical work should pay for
+      itself over time. Our commitment is to deliver reliable installations,
+      honest service, and smart solutions that continue saving you money long
+      after the job is done.
     </p>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="contact">
-    <h2 class="fade-up">Get in Touch</h2>
+    <h2 class="fade-up">Contact Imagine Electric</h2>
 
     <div class="contact-box fade-up">
       <p><strong>Email:</strong> imagineelectricmi@gmail.com</p>
       <p><strong>Phone:</strong> 1+ (734) 273-1664</p>
 
-      <a href="https://imagineelectric.setmore.com" target="_blank" class="btn-outline">
+      <a
+        href="https://imagineelectric.setmore.com"
+        class="btn-outline"
+        target="_blank"
+        rel="noopener"
+      >
         Schedule Online
       </a>
     </div>
@@ -97,18 +106,23 @@
     <p>© 2026 Imagine Electric. All rights reserved.</p>
   </footer>
 
-  <!-- SCROLL ANIMATION SCRIPT -->
+  <!-- Static-safe JS (runs after DOM load) -->
   <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.15 });
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
 
-    document.querySelectorAll('.fade-up').forEach(el => {
-      observer.observe(el);
+      document.querySelectorAll(".fade-up").forEach(el => {
+        observer.observe(el);
+      });
     });
   </script>
 
